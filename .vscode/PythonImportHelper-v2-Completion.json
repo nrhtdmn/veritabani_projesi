@@ -1,0 +1,72 @@
+[
+    {
+        "label": "Veritabani",
+        "importPath": "veritabani",
+        "description": "veritabani",
+        "isExtraImport": true,
+        "detail": "veritabani",
+        "documentation": {}
+    },
+    {
+        "label": "Veritabani",
+        "importPath": "veritabani",
+        "description": "veritabani",
+        "isExtraImport": true,
+        "detail": "veritabani",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "veritabanim",
+        "kind": 5,
+        "importPath": "ana_program",
+        "description": "ana_program",
+        "peekOfCode": "veritabanim = Veritabani(\"ornek.db\")\n# Tablo ekleme\nveritabanim.tablo_olustur(\"kullanicilar\", id=\"INTEGER PRIMARY KEY\", isim=\"TEXT\", yas=\"INTEGER\")\n# Tabloya veri ekleme\nveritabanim.veriekle(\"kullanicilar\", isim=\"Fatma\", yas=30)\n# Veritabanında arama\nsonuclar = veritabanim.veritabaninda_ara(\"kullanicilar\", \"yas > 20\")\nfor sonuc in sonuclar:\n    print(sonuc)\n# Veritabanında güncelleme",
+        "detail": "ana_program",
+        "documentation": {}
+    },
+    {
+        "label": "sonuclar",
+        "kind": 5,
+        "importPath": "ana_program",
+        "description": "ana_program",
+        "peekOfCode": "sonuclar = veritabanim.veritabaninda_ara(\"kullanicilar\", \"yas > 20\")\nfor sonuc in sonuclar:\n    print(sonuc)\n# Veritabanında güncelleme\nveritabanim.veritabani_guncelle(\"kullanicilar\", \"isim = 'Fatma'\", yas=23)\n# Veritabanında veri silme\nveritabanim.veritabani_sil(\"kullanicilar\", \"isim = 'Ayşe'\")\n# Veritabanını kapatma\nveritabanim.veritabani_kapat()\n# veritabanim.veritabani_dosyasini_sil()",
+        "detail": "ana_program",
+        "documentation": {}
+    },
+    {
+        "label": "Veritabani",
+        "kind": 6,
+        "importPath": "veritabani",
+        "description": "veritabani",
+        "peekOfCode": "class Veritabani:\n    def __init__(self, veritabani_adi):\n        self.veritabani_adi = veritabani_adi\n        self.baglanti = None\n        self.imlec = None\n        self.baglan()\n    def baglan(self):\n        \"\"\"Veritabanına bağlanır veya yeni bir veritabanı oluşturur.\"\"\"\n        if self.baglanti is None:\n            self.baglanti = sqlite3.connect(self.veritabani_adi)",
+        "detail": "veritabani",
+        "documentation": {}
+    },
+    {
+        "label": "veritabanim",
+        "kind": 5,
+        "importPath": "veritabani_silme",
+        "description": "veritabani_silme",
+        "peekOfCode": "veritabanim = Veritabani(\"ornek.db\")\n# Veritabanında bazı işlemler yapma\nveritabanim.veriekle(\"kullanıcılar\", isim=\"Mahmut\", yas=33)\n# Veritabanı dosyasını silme\nveritabanim.veritabani_dosyasini_sil()",
+        "detail": "veritabani_silme",
+        "documentation": {}
+    }
+]
